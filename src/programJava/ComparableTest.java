@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-// if not add generics
 class Employee implements Comparable<Employee> {
 	private int id;
 	private String name;
@@ -44,7 +43,7 @@ class Employee implements Comparable<Employee> {
 //		if (this.getId() > e.getId()) flag = 1;
 //		if (this.getId() < e.getId()) flag = -1;
 //		return flag;
-		
+		//return this.getId() - e.getId();
 		return (this.getName()).compareTo(e.getName());  		
 	}
 }
@@ -68,8 +67,7 @@ public class ComparableTest {
 		e4.setId(8);
 		e4.setName("bngt");
 		
-		List objList = new ArrayList();
-		List objListSort  = new ArrayList();
+		List<Employee> objList = new ArrayList<Employee>();
 		
 		objList.add(e1);
 		objList.add(e2);
@@ -82,8 +80,5 @@ public class ComparableTest {
 			Employee e= (Employee)obj;
 			System.out.println(e.getId()+"===="+e.getName());
 		});
-		
-		
-		
 	}
 }
